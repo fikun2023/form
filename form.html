@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Form</title>
+    <link rel="stylesheet" href="./form.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- firstpart -->
+        <form action="#" id="mainForm">
+            <div id="boxes">
+                <label for="firstName" id="lblFirstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Enter your first name">
+            </div>
+            <div id="boxes">
+                 <label for="lastName" id="lblLastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Enter your last name">
+            </div>
+            <div id="boxes">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" style="text-transform: uppercase; letter-spacing: 0.2rem;">
+            </div>
+            <div id="boxes">
+                 <fieldset>
+                <legend>Sex:</legend>
+                <aside>
+                    <label for="male">Male</label>
+                    <input type="radio" id="male" name="sex">
+                </aside>
+                <aside>
+                    <label for="female">Female</label>
+                    <input type="radio" id="female" name="sex">
+                </aside>
+                
+                
+            </fieldset></div>
+            
+
+           
+
+            
+           
+         </form>
+                   <!-- mid part -->
+      
+<!-- last part -->
+        <form action="#" id="midForm">
+            <div id="box2">
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address"></div>
+            <div id="box2"><label for="telephone">Telephone:</label>
+                <input type="tel" id="telephone" name="telephone"></div>
+            <div id="box2"><label for="email" id="lblEmail">Email:</label>
+                <input type="email" id="email" name="email"></div>
+            <div id="box2">  <label for="parentContact">Parent Contact:</label>
+                <input type="tel" id="parentContact" name="parentContact">
+            </div>
+        </form>
+        
+        <form action="" id="lastform">
+            <label for="acknowledge">NAME OF PERSON COMPLETING THE FORM </label>
+            <input  type="text" name="acknowledge" id="acknowledge">
+            <div class="agreement">
+    <label for="agreement" style="text-align: center;">I agree to the terms:</label>
+    <input type="checkbox" id="agreement" name="agreement">
+            </div>
+            
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" style="text-transform: uppercase; letter-spacing: 0.2rem;"> 
+    </form>
+
+            
+       
+    </div>
+    <button type="submit">Submit</button>
+    <div id="errorMessages" style="color: red;"></div>
+</body>
+<script src="./form.js"></script>
+
+</html>

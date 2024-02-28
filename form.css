@@ -1,0 +1,231 @@
+body
+{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    /* background-image: url(./background11.jpg); */
+    /* background: linear-gradient(135deg, #b4d7ee, #f0f0f0),
+    url(./background11.jpg)     */
+    /* background-image: linear-gradient(135deg, #b4d7ee, #f0f0f0),url(./background11.png);
+    */
+    background-image: url(./background11.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+*{
+    font-family: sans-serif;
+}
+#mainForm
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
+    gap: 10px; /* Gap between grid items */
+    padding: 2rem;
+}
+/* #boxes
+{
+    border: solid 1px black ;
+} */
+#firstName,#lastName,#dob
+{
+    display: block;
+    padding: 1.2em;
+    width: 90%
+
+}
+fieldset
+{
+    display: flex;
+   /* justify-content: space-between; */
+    /* align-items: center; */
+outline: none;
+width: 91%;
+border: none;
+color: white;
+/* height: fit-content; */
+}
+aside
+{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px dashed grey;
+    padding: 0.8em;
+}
+#midForm
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
+    gap: 10px; /* Gap between grid items */
+    padding: 2rem;
+}
+#address,#telephone,#email,#parentContact
+{
+    display: block;
+    padding: 1.2em;
+    width: 90%
+}
+#lastform
+{
+    padding-left: 2rem;
+}
+#lastform input
+{
+display: block;
+}
+#acknowledge,#date
+{
+    display: block;
+    padding: 1.2em;
+    width: 90%;
+}
+input 
+{
+    border-radius: 0.5rem;
+    border: #fff;
+    
+}
+label
+{
+    color: #fff;
+}
+/* Define the keyframes for the glow animation */
+@keyframes glow {
+    0% {
+      box-shadow: 0 0 3px black; /* Initial glow effect */
+    }
+    50% {
+      box-shadow: 0 0 5px black; /* Intermediate glow effect */
+    }
+    100% {
+      box-shadow: 0 0 3px black; /* Final glow effect */
+    }
+  }
+  
+  /* Define the keyframes for the scaling animation */
+  @keyframes scale {
+    0% {
+      transform: scale(1); /* Initial scale */
+    }
+    50% {
+      transform: scale(1.05); /* Intermediate scale */
+    }
+    100% {
+      transform: scale(1); /* Final scale */
+    }
+  }
+  
+  /* Apply the glow and scaling animations to the input outline when it is clicked */
+  input:focus {
+    outline: none; /* Remove default outline */
+    animation: glow 1s ease-in-out, scale 1s ease-in-out; /* Apply both animations */
+  }
+  
+
+input::placeholder
+{
+color: rgba(0, 0, 0, 0.822);
+text-transform: capitalize;
+font-family: Arial, Helvetica, sans-serif;
+letter-spacing: 0.1rem;
+}
+#date
+{
+    width: 30%;
+}
+#date::placeholder
+{
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+.agreement 
+{margin-top: 0.8rem;
+    width: 50%;
+    padding:1rem;
+    display:flex;
+    border: solid 1px black;
+    align-items: center;
+}
+/* Add styles for the button */
+button[type="submit"] {
+    display: block;
+    margin: 0 auto; /* Center the button horizontally */
+    padding: 0.8rem 1.5rem; /* Add padding */
+    font-size: 1rem; /* Set font size */
+    font-weight: bold; /* Set font weight */
+    color: #fff; /* Text color */
+    background-color: #007bff; /* Button background color */
+    border: none; /* Remove border */
+    border-radius: 0.5rem; /* Add border radius */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Add hover effect for the button */
+button[type="submit"]:hover {
+    background-color: #0056b3; /* Darken the background color on hover */
+}
+
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+  }
+  /* Add a media query for screens smaller than 600px */
+@media screen and (max-width: 600px) {
+    /* body{
+        overflow: hidden;
+    } */
+    .container {
+        padding: 0.5rem; /* Reduce padding for smaller screens */
+    }
+    
+    #mainForm, #midForm, #lastform {
+        grid-template-columns: 1fr; /* Change to a single column layout for smaller screens */
+    }
+
+    input[type="text"], input[type="tel"], input[type="email"], input[type="date"] {
+        width: 100%; /* Make input fields full width on smaller screens */
+    }
+
+    label {
+        font-size: 0.9em; /* Decrease font size for labels on smaller screens */
+    }
+
+    button {
+        margin: 0.8rem auto; /* Center the button on smaller screens */
+    }
+
+    input[type="checkbox"] {
+        transform: scale(1.2); /* Increase the size of the checkbox for smaller screens */
+    }
+}
+/* Add a media query for screens larger than 600px */
+@media screen and (min-width: 601px) {
+    .container {
+        padding: 2rem; /* Restore padding for larger screens */
+    }
+    
+    #mainForm, #midForm, #lastform {
+        grid-template-columns: repeat(2, 1fr); /* Use two-column layout for larger screens */
+    }
+
+    input[type="text"], input[type="tel"], input[type="email"], input[type="date"] {
+        width: 90%; /* Reduce input field width for larger screens */
+    }
+
+    label {
+        font-size: 1em; /* Restore label font size for larger screens */
+    }
+
+    button {
+        margin: 0.8rem 0 0.8rem auto; /* Align the button to the right for larger screens */
+    }
+
+    input[type="checkbox"] {
+        transform: scale(1); /* Restore the default size of checkboxes for larger screens */
+    }
+}
